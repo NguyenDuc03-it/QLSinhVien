@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=QuanLySinhVien;trustServerCertificate=true</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+        <!--Mapping-->
+        <mapping class="model.DangNhap"/>
+        <mapping class="view.Login"/>
+        
+        <mapping class="model.Lop"/>
+        <mapping class="view.QL_lop_JFrame"/>
+        
+        <mapping class="model.Khoa"/>
+        <mapping class="view.QL_Khoa"/>
+        
+        <mapping class="model.MonHoc"/>
+        <mapping class="view.QL_MonHoc"/>
+        
+        
+        <mapping class="model.SinhVien"/>
+        <mapping class="view.QL_SinhVien"/>
+        
+        <mapping class="model.Diem"/>
+        <mapping class="view.QL_Diem"/>
+        <!-- Other Hibernate properties -->
+    </session-factory>
+    
+</hibernate-configuration>
